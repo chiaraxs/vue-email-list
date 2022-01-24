@@ -16,15 +16,19 @@
     
     <!-- vue.js #app -->
     <div id="app">
-
+        
         <!-- con il v-if settato sul length dell'array evitiamo tempi di attesa tra una generazione/stampa di mail e l'altra  -->
         <!-- li genera tutti e 10 insieme -->
         
-        <div v-for="mail in mails"> 
-            <ul>
-                <li v-if="mails.length === 10">{{ mail }}</li>       
-            </ul>
+        <div> 
+            <ol v-if="mails.length === 10">
+                <li v-for="mail in mails">{{ mail }}</li>       
+            </ol>
         </div>
+
+        <!-- <button @click="randomMails">Click me!</button> -->
+        
+
     </div>
 
 
